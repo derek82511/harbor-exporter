@@ -1,0 +1,17 @@
+tool: docker
+registry: your_registry_fqdn
+projects:
+  - name: project1
+    repository:
+      items:
+        - repository1
+        - repository2
+  - name: project2
+    repository:
+      fetchAll: true
+runtime:
+  # process pool size
+  pool: 4
+  # maximum image count per export tar file
+  exportFile:
+    maxImageCount: 10
